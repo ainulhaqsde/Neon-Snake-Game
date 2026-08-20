@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <meta
+    name="description"
+    content="Neon Snake Game - A luxury neon arcade snake experience created by Ainul Haq."
+  />
+
+  <meta name="theme-color" content="#05070c" />
+
+  <title>Neon Snake Game | Ainul Haq</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- =========================================
+       BACKGROUND DECORATIONS
+  ========================================== -->
+
+  <div class="background-effects" aria-hidden="true">
+    <div class="ambient-glow glow-one"></div>
+    <div class="ambient-glow glow-two"></div>
+    <div class="ambient-glow glow-three"></div>
+
+    <div class="grid-overlay"></div>
+    <div class="vignette"></div>
+
+    <div class="particles">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+
+
+  <!-- =========================================
+       MAIN APP
+  ========================================== -->
+
+  <main class="game-page">
+
+    <!-- =========================================
+         TOP BRAND HEADER
+    ========================================== -->
+
+    <header class="hero-header">
+
+      <div class="brand-badge">
+        <span class="badge-dot"></span>
+        PREMIUM NEON ARCADE
+      </div>
+
+      <h1 class="game-title">
+        <span class="title-icon">🐍</span>
+
+        <span class="title-text">
+          NEON
+          <span class="gold-text">SNAKE</span>
+        </span>
+      </h1>
+
+      <p class="game-subtitle">
+        Enter the royal neon arena.
+        Chase the glow. Rule the grid.
+      </p>
+
+    </header>
+
+
+    <!-- =========================================
+         MAIN GAME SHELL
+    ========================================== -->
+
+    <section class="game-shell">
+
+      <!-- Decorative corners -->
+      <span class="corner corner-top-left"></span>
+      <span class="corner corner-top-right"></span>
+      <span class="corner corner-bottom-left"></span>
+      <span class="corner corner-bottom-right"></span>
+
+
+      <!-- =========================================
+           GAME HUD
+      ========================================== -->
+
+      <div class="game-hud">
+
+        <div class="hud-card">
+          <span class="hud-label">
+            SCORE
+          </span>
+
+          <strong
+            class="hud-value"
+            id="score"
+          >
+            0
+          </strong>
+        </div>
+
+
+        <div class="hud-card hud-center">
+          <span class="hud-label">
+            STATUS
+          </span>
+
+          <div
+            class="status-indicator"
+            id="gameStatus"
+          >
+            <span class="status-dot"></span>
+            READY
+          </div>
+        </div>
+
+
+        <div class="hud-card">
+          <span class="hud-label">
+            BEST
+          </span>
+
+          <strong
+            class="hud-value"
+            id="highScore"
+          >
+            0
+          </strong>
+        </div>
+
+      </div>
+
+
+      <!-- =========================================
+           CANVAS AREA
+      ========================================== -->
+
+      <div class="canvas-frame">
+
+        <div class="canvas-top-line">
+          <span></span>
+          <div class="canvas-emblem">
+            ◆
+          </div>
+          <span></span>
+        </div>
+
+
+        <div class="canvas-wrapper">
+
+          <canvas
+            id="gameCanvas"
+            width="600"
+            height="400"
+            aria-label="Neon Snake Game Canvas"
+          >
+            Your browser does not support the HTML canvas element.
+          </canvas>
+
+
+          <!-- Start Overlay -->
+
+          <div
+            class="canvas-overlay active"
+            id="startOverlay"
+          >
+            <div class="overlay-content">
+
+              <div class="snake-emblem">
+                🐍
+              </div>
+
+              <p class="overlay-eyebrow">
+                WELCOME TO THE ARENA
+              </p>
+
+              <h2>
+                Neon Snake
+              </h2>
+
+              <p>
+                Choose your difficulty below
+                and begin your run.
+              </p>
+
+              <div class="keyboard-hint">
+                <span>↑</span>
+
+                <div>
+                  <span>←</span>
+                  <span>↓</span>
+                  <span>→</span>
+                </div>
+              </div>
+
+              <small>
+                Use Arrow Keys to Control
+              </small>
+
+            </div>
+          </div>
+
+
+          <!-- Pause Overlay -->
+
+          <div
+            class="canvas-overlay"
+            id="pauseOverlay"
+          >
+            <div class="overlay-content">
+
+              <div class="pause-symbol">
+                II
+              </div>
+
+              <p class="overlay-eyebrow">
+                GAME PAUSED
+              </p>
+
+              <h2>
+                Take Your Time
+              </h2>
+
+              <p>
+                Your neon run is waiting.
+              </p>
+
+            </div>
+          </div>
+
+
+          <!-- Game Over Overlay -->
+
+          <div
+            class="canvas-overlay"
+            id="gameOver"
+          >
+            <div class="overlay-content game-over-content">
+
+              <div class="game-over-icon">
+                ☠
+              </div>
+
+              <p class="overlay-eyebrow">
+                RUN ENDED
+              </p>
+
+              <h2>
+                Game Over
+              </h2>
+
+
+              <div class="final-score-box">
+
+                <span>
+                  FINAL SCORE
+                </span>
+
+                <strong id="finalScore">
+                  0
+                </strong>
+
+              </div>
+
+
+              <button
+                class="primary-btn replay-btn"
+                onclick="restartGame()"
+              >
+                <span class="button-icon">
+                  ↻
+                </span>
+
+                Play Again
+              </button>
+
+            </div>
+          </div>
+
+        </div>
+
+
+        <div class="canvas-bottom-line">
+          <span></span>
+
+          <p>
+            THE ROYAL GRID
+          </p>
+
+          <span></span>
+        </div>
+
+      </div>
+
+
+      <!-- =========================================
+           DIFFICULTY SECTION
+      ========================================== -->
+
+      <section class="difficulty-section">
+
+        <div class="section-heading">
+
+          <span class="section-line"></span>
+
+          <h3>
+            SELECT DIFFICULTY
+          </h3>
+
+          <span class="section-line"></span>
+
+        </div>
+
+
+        <div class="difficulty-grid">
+
+
+          <!-- EASY -->
+
+          <button
+            class="difficulty-card"
+            data-level="easy"
+            onclick="startGame(8, 'Easy')"
+          >
+
+            <span class="difficulty-icon">
+              ♟
+            </span>
+
+            <span class="difficulty-info">
+
+              <strong>
+                EASY
+              </strong>
+
+              <small>
+                Relaxed Pace
+              </small>
+
+            </span>
+
+            <span class="difficulty-speed">
+              8
+              <small>SPD</small>
+            </span>
+
+          </button>
+
+
+          <!-- MEDIUM -->
+
+          <button
+            class="difficulty-card featured"
+            data-level="medium"
+            onclick="startGame(12, 'Medium')"
+          >
+
+            <span class="recommended-badge">
+              RECOMMENDED
+            </span>
+
+            <span class="difficulty-icon">
+              ⚡
+            </span>
+
+            <span class="difficulty-info">
+
+              <strong>
+                MEDIUM
+              </strong>
+
+              <small>
+                Balanced Challenge
+              </small>
+
+            </span>
+
+            <span class="difficulty-speed">
+              12
+              <small>SPD</small>
+            </span>
+
+          </button>
+
+
+          <!-- HARD -->
+
+          <button
+            class="difficulty-card"
+            data-level="hard"
+            onclick="startGame(18, 'Hard')"
+          >
+
+            <span class="difficulty-icon">
+              ♛
+            </span>
+
+            <span class="difficulty-info">
+
+              <strong>
+                HARD
+              </strong>
+
+              <small>
+                Elite Speed
+              </small>
+
+            </span>
+
+            <span class="difficulty-speed">
+              18
+              <small>SPD</small>
+            </span>
+
+          </button>
+
+        </div>
+
+      </section>
+
+
+      <!-- =========================================
+           GAME CONTROLS
+      ========================================== -->
+
+      <div class="game-controls">
+
+        <button
+          class="secondary-btn"
+          id="pauseButton"
+          onclick="pauseGame()"
+        >
+          <span class="button-icon">
+            II
+          </span>
+
+          Pause
+        </button>
+
+
+        <button
+          class="primary-btn"
+          id="resumeButton"
+          onclick="resumeGame()"
+        >
+          <span class="button-icon">
+            ▶
+          </span>
+
+          Resume
+        </button>
+
+
+        <button
+          class="secondary-btn"
+          onclick="restartGame()"
+        >
+          <span class="button-icon">
+            ↻
+          </span>
+
+          Restart
+        </button>
+
+      </div>
+
+
+      <!-- =========================================
+           GAME INFORMATION
+      ========================================== -->
+
+      <div class="game-info-bar">
+
+        <div class="info-item">
+
+          <span class="info-icon">
+            ◇
+          </span>
+
+          <div>
+            <small>
+              CONTROL
+            </small>
+
+            <strong>
+              Arrow Keys
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="info-divider"></div>
+
+
+        <div class="info-item">
+
+          <span class="info-icon">
+            ●
+          </span>
+
+          <div>
+            <small>
+              OBJECTIVE
+            </small>
+
+            <strong>
+              Collect Neon Orbs
+            </strong>
+          </div>
+
+        </div>
+
+
+        <div class="info-divider"></div>
+
+
+        <div class="info-item">
+
+          <span class="info-icon">
+            ♛
+          </span>
+
+          <div>
+            <small>
+              MODE
+            </small>
+
+            <strong id="currentDifficulty">
+              Not Selected
+            </strong>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- =========================================
+         FOOTER
+    ========================================== -->
+
+    <footer class="site-footer">
+
+      <div class="footer-emblem">
+        <span></span>
+        ◆
+        <span></span>
+      </div>
+
+      <p class="footer-brand">
+        NEON SNAKE GAME
+      </p>
+
+      <p class="footer-copy">
+        © 2026 Neon Snake Game.
+        All Rights Reserved.
+      </p>
+
+      <p class="developer-credit">
+        Developed & Created by
+        <strong>Ainul Haq</strong>
+      </p>
+
+    </footer>
+
+  </main>
+
+
+  <!-- =========================================
+       JAVASCRIPT
+  ========================================== -->
+
+  <script src="script.js"></script>
+
+</body>
+</html>
