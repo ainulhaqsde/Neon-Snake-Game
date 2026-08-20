@@ -14,7 +14,7 @@ A premium **Neon Snake Game** built with **HTML, CSS, and JavaScript**, combinin
 
 ## 🎮 Live Demo
 
-[🎮 Play Neon Snake Game](https://neon-snake-game-ainul.vercel.app/)
+[🎮 Play Neon Snake Game](https://neonsnakegame-ainuldev.vercel.app/) 
 
 ---
 
