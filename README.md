@@ -5,7 +5,6 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-yellow?logo=javascript\&logoColor=black)
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
-![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4-red)
 
 A premium, luxury-inspired **Neon Snake Game** built using **HTML, CSS, and JavaScript**.
 
