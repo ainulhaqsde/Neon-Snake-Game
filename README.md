@@ -6,17 +6,13 @@
 ![Status](https://img.shields.io/badge/Status-Active-brightgreen)
 ![Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?logo=vercel)
 
-A premium, luxury-inspired **Neon Snake Game** built using **HTML, CSS, and JavaScript**.
-
-This project transforms the classic Snake experience into a modern neon arcade game with glowing animations, royal gold accents, high-score tracking, difficulty levels, pause/resume controls, responsive design, and enhanced visual effects.
+A premium **Neon Snake Game** built with **HTML, CSS, and JavaScript**, combining classic Snake gameplay with a futuristic neon arcade interface, difficulty levels, high-score tracking, animations, and responsive design.
 
 > **Chase the glow. Rule the grid.**
 
 ---
 
 ## 🎮 Live Demo
-
-Play the game here:
 
 [🎮 Play Neon Snake Game](https://neon-snake-game-ainul.vercel.app/)
 
@@ -25,23 +21,19 @@ Play the game here:
 ## ✨ Features
 
 * 🐍 Classic Snake gameplay
-* 💎 Premium luxury neon interface
+* 💎 Premium neon arcade interface
 * 🌌 Animated futuristic background
-* ✨ Cyan, emerald, and royal gold glow effects
-* 🎮 Three difficulty levels
-* ⏸️ Pause and Resume controls
-* 🔄 Restart functionality
-* 🏆 High Score tracking using `localStorage`
-* 📊 Real-time score display
-* 🔥 Animated glowing food orb
+* 🎮 Easy, Medium & Hard difficulty
+* ⏸️ Pause / Resume controls
+* 🔄 Restart & Play Again
+* 🏆 High-score tracking with `localStorage`
+* 🔥 Animated neon food orb
 * 👀 Direction-aware snake eyes
-* 💫 Score animation effects
-* ☠️ Premium Game Over screen
-* ⌨️ Keyboard shortcuts
-* 📱 Responsive layout
-* 🎨 Glassmorphism interface
-* 💻 Runs directly in the browser
-* 🚀 Easy deployment on Vercel
+* 💀 Premium Game Over screen
+* ⌨️ Keyboard controls
+* 📱 Responsive design
+* 🎨 Glassmorphism & glow effects
+* 🚀 Vercel-ready deployment
 
 ---
 
@@ -53,55 +45,27 @@ Play the game here:
 
 ## 🕹️ How to Play
 
-Use the keyboard arrow keys to control the snake.
+Use the **Arrow Keys** to control the snake and collect glowing food to increase your score.
 
-| Key            | Action                  |
-| -------------- | ----------------------- |
-| ⬆️ Arrow Up    | Move Up                 |
-| ⬇️ Arrow Down  | Move Down               |
-| ⬅️ Arrow Left  | Move Left               |
-| ➡️ Arrow Right | Move Right              |
-| Space          | Pause / Resume          |
-| R              | Restart after Game Over |
+| Key         | Action         |
+| ----------- | -------------- |
+| ⬆️ ⬇️ ⬅️ ➡️ | Move Snake     |
+| `Space`     | Pause / Resume |
+| `R`         | Restart        |
 
-### Objective
-
-Eat the glowing neon food orbs to increase your score and grow the snake.
-
-Avoid:
-
-* Hitting the walls
-* Hitting your own snake body
-
-The longer you survive and the more food you collect, the higher your score becomes.
+Avoid hitting the **walls** or the **snake's own body**.
 
 ---
 
-## ⚡ Difficulty Levels
+## ⚡ Difficulty
 
-### 🟢 Easy
-
-A relaxed pace designed for beginners.
-
-**Speed:** `8`
-
-### 🟡 Medium
-
-Balanced gameplay with a moderate challenge.
-
-**Speed:** `12`
-
-### 🔴 Hard
-
-Fast gameplay designed for experienced players.
-
-**Speed:** `18`
+* 🟢 **Easy** — Speed `8`
+* 🟡 **Medium** — Speed `12`
+* 🔴 **Hard** — Speed `18`
 
 ---
 
-## 🛠️ Technologies Used
-
-This project is built using:
+## 🛠️ Technologies
 
 * HTML5
 * CSS3
@@ -124,171 +88,39 @@ Neon-Snake-Game/
 ├── style.css
 ├── script.js
 ├── README.md
-├── screenshot.png
-└── LICENSE
+└── screenshot.png
 ```
 
 ---
 
-## ⚙️ Installation
+## 🎨 Design
 
-### 1. Clone the Repository
+The game combines a futuristic arcade aesthetic with premium styling:
 
-```bash
-git clone https://github.com/iamainul/Neon-Snake-Game.git
-```
-
-### 2. Open the Project Folder
-
-```bash
-cd Neon-Snake-Game
-```
-
-### 3. Run the Game
-
-Open:
-
-```text
-index.html
-```
-
-in your browser.
-
-You can also run the project using a local development server such as **Live Server** in Visual Studio Code.
-
----
-
-## 💻 Run with Visual Studio Code
-
-1. Open the project folder in Visual Studio Code.
-2. Install the **Live Server** extension.
-3. Open `index.html`.
-4. Right-click inside the file.
-5. Select **Open with Live Server**.
-6. The game will open automatically in your browser.
-
----
-
-## 🚀 Deploy on Vercel
-
-This project can be deployed easily using Vercel.
-
-### Step 1
-
-Push your project to GitHub.
-
-### Step 2
-
-Sign in to Vercel.
-
-### Step 3
-
-Select:
-
-```text
-Add New → Project
-```
-
-### Step 4
-
-Import your GitHub repository:
-
-```text
-Neon-Snake-Game
-```
-
-### Step 5
-
-Click:
-
-```text
-Deploy
-```
-
-No build command or special configuration is required because the project uses plain HTML, CSS, and JavaScript.
-
----
-
-## 🎨 Design Theme
-
-The redesigned Neon Snake Game combines a futuristic neon arcade style with premium luxury elements.
-
-The visual design includes:
-
-* Deep black backgrounds
-* Cyan neon lighting
-* Emerald green snake effects
-* Royal gold accents
-* Luxury border details
+* Cyan, emerald & royal-gold neon effects
 * Glassmorphism panels
-* Futuristic grid effects
-* Ambient glowing particles
-* Animated background lighting
-* Premium arcade-style HUD
-* Smooth hover effects
-* Smooth transition animations
-* Elegant typography
-
-The goal is to make the game feel more like a premium arcade experience instead of a basic browser Snake project.
+* Animated backgrounds and particles
+* Glowing snake and food effects
+* Premium HUD and overlays
+* Smooth transitions and animations
 
 ---
 
-## 🐍 Snake Design
+## 🏆 High Score
 
-The snake has been visually improved with:
-
-* Gradient neon coloring
-* Emerald and cyan glow
-* Rounded snake segments
-* Brighter snake head
-* Direction-aware eyes
-* Dynamic shadow effects
-* Smooth neon styling
-
-The snake head automatically changes its eye direction depending on the direction of movement.
-
----
-
-## 🔴 Neon Food Orb
-
-Instead of a simple red circle, the food is designed as a glowing neon orb.
-
-It includes:
-
-* Animated pulsing
-* Red neon glow
-* Gold highlights
-* Radial gradient
-* Outer glowing ring
-* Dynamic visual animation
-
-Collecting the orb increases the player's score and grows the snake.
-
----
-
-## 🏆 High Score System
-
-The highest score is automatically stored in the browser using:
+Your best score is automatically saved using:
 
 ```javascript
 localStorage
 ```
 
-This means your best score remains saved even after:
-
-* Refreshing the page
-* Closing the browser tab
-* Reopening the game later
-
-The saved score remains available as long as the browser's local storage is not cleared.
+The score remains available after refreshing or reopening the game unless browser storage is cleared.
 
 ---
 
-## 📊 Game Status System
+## 📊 Game Status
 
-The premium HUD displays the current state of the game.
-
-Possible statuses include:
+The HUD displays the current game state:
 
 ```text
 READY
@@ -297,166 +129,34 @@ PAUSED
 GAME OVER
 ```
 
-Each status uses its own visual indicator and glow style.
-
----
-
-## 🎮 Game Controls
-
-The game includes both interface buttons and keyboard shortcuts.
-
-### Interface Controls
-
-* Easy
-* Medium
-* Hard
-* Pause
-* Resume
-* Restart
-* Play Again
-
-### Keyboard Controls
-
-```text
-Arrow Up       → Move Up
-Arrow Down     → Move Down
-Arrow Left     → Move Left
-Arrow Right    → Move Right
-Space          → Pause / Resume
-R              → Restart after Game Over
-```
-
----
-
-## ⏸️ Pause & Resume
-
-The game can be paused at any time while playing.
-
-You can pause using:
-
-```text
-Pause Button
-```
-
-or:
-
-```text
-Space Key
-```
-
-While paused, the snake stops moving and a premium pause overlay appears.
-
-Press **Resume** or **Space** again to continue the game.
-
----
-
-## 💀 Game Over System
-
-The game ends when the snake:
-
-* Hits a wall
-* Hits its own body
-
-When the game ends, a premium Game Over interface appears showing:
-
-* Final Score
-* Game Over status
-* Restart option
-* Play Again button
-
-If the final score is higher than the previous best score, the high score is automatically updated.
-
----
-
-## 💫 Animations
-
-The game includes several visual animations.
-
-Examples include:
-
-* Floating neon particles
-* Ambient background movement
-* Glowing title animation
-* Snake icon floating effect
-* Pulsing neon indicators
-* Animated food orb
-* Score increase animation
-* Game Over flash effect
-* Difficulty button hover animation
-* Smooth overlay transitions
-* Premium lighting effects
-
 ---
 
 ## 📱 Responsive Design
 
-The interface automatically adjusts to different screen sizes.
-
-Supported layouts include:
+Designed to work across:
 
 * Desktop
 * Laptop
 * Tablet
 * Mobile
 
-The main game canvas maintains its game ratio while the surrounding interface adapts to the available screen width.
-
----
-
-## 🌐 Browser Compatibility
-
-The game works in most modern browsers, including:
-
-* Google Chrome
-* Microsoft Edge
-* Mozilla Firefox
-* Safari
-* Opera
-
-For the best experience, use the latest version of your browser.
-
----
-
-## 🔒 Local Data
-
-The game does not require:
-
-* User accounts
-* Login
-* Database
-* Server
-* Personal information
-
-Only the high score is stored locally in the user's browser.
+For the best experience, use a modern browser such as Chrome, Edge, Firefox, Safari, or Opera.
 
 ---
 
 ## 🔮 Future Improvements
 
-Possible future upgrades include:
+Planned ideas include:
 
-* 🔊 Background music
-* 🎵 Sound effects
+* 🔊 Music & sound effects
 * 📱 Mobile swipe controls
-* 📲 On-screen mobile controls
-* 🏅 Achievement system
-* 🎯 Level progression
 * ⚡ Power-ups
-* 🛡️ Shields
-* 🧲 Magnet power-ups
-* ✖️ Score multipliers
-* 🧱 Special obstacles
-* 🎨 Multiple themes
-* 🐍 Multiple snake skins
-* 🌈 Unlockable effects
+* 🏅 Achievements & levels
+* 🎨 Snake skins and themes
 * 🏆 Global leaderboard
-* 👤 Player profiles
-* 🌐 Online multiplayer
 * 🎮 Gamepad support
-* 🌀 Special game modes
-* ⏱️ Time Attack mode
-* ♾️ Endless mode
-* 🏁 Challenge mode
+* 🌐 Online multiplayer
+* ⏱️ Time Attack & Challenge modes
 
 ---
 
@@ -464,7 +164,7 @@ Possible future upgrades include:
 
 **Developed & Created by Ainul Haq**
 
-Neon Snake Game is a modern reinterpretation of the classic Snake Game, designed with a premium neon arcade interface and enhanced browser-based gameplay.
+A modern reinterpretation of the classic Snake Game with a premium neon arcade experience.
 
 ---
 
@@ -476,30 +176,32 @@ Neon Snake Game is a modern reinterpretation of the classic Snake Game, designed
 
 ---
 
-## 📜 License
-
-This project is available under the license included in this repository.
-
-See:
-
-```text
-LICENSE
-```
-
-for complete licensing information.
-
----
-
 ## ⭐ Support
 
-If you like this project, consider giving the GitHub repository a ⭐.
-
-It helps support the project and future improvements.
+If you like the project, consider giving the GitHub repository a ⭐ to support future improvements.
 
 ---
 
-## 🐍 Neon Snake Game
+# 🐍 Neon Snake Game
 
 ### Chase the glow. Rule the grid.
 
 **Developed & Created by Ainul Haq**
+
+---
+
+## ⚙️ Installation & Usage
+
+1. Clone the repo:
+
+```bash
+git clone https://github.com/ainulhaqsde/Neon-Snake-Game.git
+```
+
+2. Open the project folder:
+
+```bash
+cd Neon-Snake-Game
+```
+
+3. Open `index.html` directly in your browser or run it using **Live Server** in Visual Studio Code.
